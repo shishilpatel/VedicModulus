@@ -1,0 +1,22 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Dark disc background -->
+    <path
+        android:fillColor="#1E2230"
+        android:pathData="M 24,4 A 20,20 0 1,1 24,44 A 20,20 0 1,1 24,4 Z" />
+    <!-- Outer faint rim -->
+    <path
+        android:strokeColor="#3E455B"
+        android:strokeWidth="1.2"
+        android:pathData="M 24,4 A 20,20 0 1,1 24,44 A 20,20 0 1,1 24,4 Z" />
+    <!-- Faint crater details on dark moon -->
+    <path
+        android:fillColor="#171A24"
+        android:pathData="M 17,16 A 3,3 0 1,1 17,22 A 3,3 0 1,1 17,16 Z" />
+    <path
+        android:fillColor="#171A24"
+        android:pathData="M 29,28 A 4,4 0 1,1 29,36 A 4,4 0 1,1 29,28 Z" />
+</vector>

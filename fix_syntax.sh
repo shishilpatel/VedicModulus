@@ -1,0 +1,2 @@
+sed -i '1,6d' app/src/main/java/com/example/ui/components/VedicRealtimeSpashtaCard.kt
+sed -i '1a import androidx.compose.animation.core.animateFloat\nimport androidx.compose.animation.core.tween\nimport androidx.compose.animation.core.infiniteRepeatable\nimport androidx.compose.animation.core.RepeatMode\nimport androidx.compose.animation.core.rememberInfiniteTransition\nimport androidx.compose.runtime.getValue' app/src/main/java/com/example/ui/components/VedicRealtimeSpashtaCard.kt

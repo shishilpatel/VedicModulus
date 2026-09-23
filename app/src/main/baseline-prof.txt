@@ -1,0 +1,16 @@
+Lcom/example/engines/astronomy/AstronomicalEngineProvider;
+Lcom/example/engines/astronomy/CachedAstronomicalEngine;
+Lcom/example/engines/astronomy/MeeusAstronomicalEngine;
+Lcom/example/engines/astronomy/VedicTimeCalculator;
+Lcom/example/engines/jyotisha/JyotishaEngine;
+Lcom/example/engines/panchanga/PanchangaEngine;
+Lcom/example/engines/personalization/VedicPersonalizationEngine;
+Lcom/example/ui/screens/DashboardScreenKt;
+Lcom/example/ui/components/VedicTimeCardKt;
+Lcom/example/ui/components/TickingDigitalClockKt;
+Lcom/example/ui/components/VedicTimeReadoutKt;
+Lcom/example/ui/components/GalaxyWatchFaceCanvasKt;
+Lcom/example/core/model/DailyVedicProfile;
+Lcom/example/core/model/PanchangaData;
+Lcom/example/core/model/VedicTimeData;
+Lcom/example/MainActivity;

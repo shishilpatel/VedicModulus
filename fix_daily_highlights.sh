@@ -1,0 +1,2 @@
+sed -i 's/val response = model.generateContent(prompt)/val response = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) { model.generateContent(prompt) }/g' app/src/main/java/com/example/ui/screens/tabs/DailyHighlightsTab.kt
+sed -i 's/val openAiResponse = com.example.api.generateWithOpenAI(prompt, openAiKey)/val openAiResponse = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) { com.example.api.generateWithOpenAI(prompt, openAiKey) }/g' app/src/main/java/com/example/ui/screens/tabs/DailyHighlightsTab.kt

@@ -1,0 +1,27 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Dark disc background -->
+    <path
+        android:fillColor="#1E2230"
+        android:pathData="M 24,4 A 20,20 0 1,1 24,44 A 20,20 0 1,1 24,4 Z" />
+    <path
+        android:strokeColor="#3E455B"
+        android:strokeWidth="1.2"
+        android:pathData="M 24,4 A 20,20 0 1,1 24,44 A 20,20 0 1,1 24,4 Z" />
+    <!-- Waxing Gibbous (More than half illuminated on right side) -->
+    <path
+        android:fillColor="#FFCA28"
+        android:pathData="M 24,4 A 20,20 0 0,1 24,44 A 10,20 0 0,1 24,4 Z" />
+    <!-- Maria detail on illuminated face -->
+    <path
+        android:fillColor="#FFA000"
+        android:fillAlpha="0.35"
+        android:pathData="M 22,17 A 4,4 0 1,1 22,25 A 4,4 0 1,1 22,17 Z" />
+    <path
+        android:fillColor="#FFA000"
+        android:fillAlpha="0.35"
+        android:pathData="M 32,26 A 4.5,4.5 0 1,1 32,35 A 4.5,4.5 0 1,1 32,26 Z" />
+</vector>

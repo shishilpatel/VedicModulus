@@ -1,0 +1,98 @@
+   275	                    AnimatedSunPathArc(
+   276	                        vedicTime = vedicTime,
+   277	                        currentTime = dailyProfile.currentZonedDateTime,
+   278	                        modifier = Modifier
+   279	                            .padding(horizontal = 24.dp)
+   280	                            .padding(bottom = 8.dp)
+   281	                    )
+   282	
+   283	                    Spacer(modifier = Modifier.height(8.dp))
+   284	                    Row(
+   285	                        modifier = Modifier.fillMaxWidth(),
+   286	                        horizontalArrangement = Arrangement.SpaceBetween
+   287	                    ) {
+   288	                        Row(verticalAlignment = Alignment.CenterVertically) {
+   289	                            Icon(
+   290	                                imageVector = Icons.Default.Brightness5,
+   291	                                contentDescription = "Sunrise",
+   292	                                tint = OrangeAccent,
+   293	                                modifier = Modifier.size(14.dp)
+   294	                            )
+   295	                            Spacer(modifier = Modifier.width(4.dp))
+   296	                            Text(
+   297	                                text = "Suryodaya: ${dailyProfile.panchanga.sunrise.format(sunriseFormatter)}",
+   298	                                style = MaterialTheme.typography.bodySmall.copy(
+   299	                                    fontSize = 11.sp,
+   300	                                    color = DarkTextSecondary
+   301	                                )
+   302	                            )
+   303	                        }
+   304	                        Row(verticalAlignment = Alignment.CenterVertically) {
+   305	                            Icon(
+--
+   435	private fun AnimatedSunPathArc(
+   436	    vedicTime: VedicTimeData,
+   437	    currentTime: java.time.ZonedDateTime,
+   438	    modifier: Modifier = Modifier
+   439	) {
+   440	    val dayDuration = java.time.Duration.between(vedicTime.sunrise, vedicTime.sunset).seconds.toFloat().coerceAtLeast(1f)
+   441	    val elapsedDay = java.time.Duration.between(vedicTime.sunrise, currentTime).seconds.toFloat()
+   442	    val progress = (elapsedDay / dayDuration).coerceIn(0f, 1f)
+   443	    
+   444	    val animatedProgress by androidx.compose.animation.core.animateFloatAsState(
+   445	        targetValue = progress,
+   446	        animationSpec = androidx.compose.animation.core.tween(durationMillis = 2000, easing = androidx.compose.animation.core.FastOutSlowInEasing),
+   447	        label = "sunPathArc"
+   448	    )
+   449	    
+   450	    androidx.compose.foundation.Canvas(modifier = modifier.fillMaxWidth().aspectRatio(2f)) {
+   451	        val canvasWidth = size.width
+   452	        val radius = canvasWidth / 2f
+   453	        
+   454	        // Dashed Background Arc (Full Sunrise to Sunset)
+   455	        drawArc(
+   456	            color = MaroonPrimary.copy(alpha = 0.2f),
+   457	            startAngle = 180f,
+   458	            sweepAngle = 180f,
+   459	            useCenter = false,
+   460	            size = androidx.compose.ui.geometry.Size(canvasWidth, canvasWidth),
+   461	            style = androidx.compose.ui.graphics.drawscope.Stroke(
+   462	                width = 4.dp.toPx(),
+   463	                cap = androidx.compose.ui.graphics.StrokeCap.Round,
+   464	                pathEffect = androidx.compose.ui.graphics.PathEffect.dashPathEffect(floatArrayOf(15f, 15f))
+   465	            )
+   466	        )
+   467	        
+   468	        // Active Progress Arc
+   469	        if (animatedProgress > 0f) {
+   470	            drawArc(
+   471	                color = OrangeAccent,
+   472	                startAngle = 180f,
+   473	                sweepAngle = 180f * animatedProgress,
+   474	                useCenter = false,
+   475	                size = androidx.compose.ui.geometry.Size(canvasWidth, canvasWidth),
+   476	                style = androidx.compose.ui.graphics.drawscope.Stroke(
+   477	                    width = 6.dp.toPx(),
+   478	                    cap = androidx.compose.ui.graphics.StrokeCap.Round
+   479	                )
+   480	            )
+   481	        }
+   482	        
+   483	        // Calculate Sun position
+   484	        val cx = radius
+   485	        val cy = radius
+   486	        val angleInDegrees = 180f + (180f * animatedProgress)
+   487	        val angleInRadians = Math.toRadians(angleInDegrees.toDouble())
+   488	        
+   489	        val sunX = cx + radius * kotlin.math.cos(angleInRadians).toFloat()
+   490	        val sunY = cy + radius * kotlin.math.sin(angleInRadians).toFloat()
+   491	        val sunOffset = androidx.compose.ui.geometry.Offset(sunX, sunY)
+   492	        
+   493	        // Sun Glow
+   494	        drawCircle(
+   495	            color = OrangeAccent.copy(alpha = 0.4f),
+   496	            radius = 16.dp.toPx(),
+   497	            center = sunOffset
+   498	        )
+   499	        // Sun Core
+   500	        drawCircle(

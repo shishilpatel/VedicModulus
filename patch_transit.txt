@@ -1,0 +1,52 @@
+@@ -21,6 +21,8 @@
+ import com.example.ui.theme.LightBorder
+ import com.example.ui.theme.MaroonPrimary
+ import com.example.ui.theme.OrangeAccent
++import com.example.core.model.BirthProfile
++import com.example.engines.astronomy.SwissEphGrahaSpashtaHelper
+ import java.time.ZonedDateTime
+ import java.time.format.DateTimeFormatter
+ 
+@@ -28,15 +30,30 @@
+ fun TransitCalendarCard(
+     currentZonedDateTime: ZonedDateTime,
++    userBirthProfile: BirthProfile? = null,
+     modifier: Modifier = Modifier
+ ) {
+     val engine = remember { SwissEphAdvancedFeatures() }
++    val spashtaHelper = remember { SwissEphGrahaSpashtaHelper() }
+     val dateFormatter = DateTimeFormatter.ofPattern("MMM dd, yyyy")
+     
++    val natalMoonRashiIndex = remember(userBirthProfile) {
++        userBirthProfile?.let { profile ->
++            val spashtaList = spashtaHelper.calculateGrahaSpashta(
++                date = profile.birthDate,
++                time = profile.birthTime,
++                latitude = profile.birthCity.latitude,
++                longitude = profile.birthCity.longitude,
++                timezoneId = profile.birthCity.timezoneId
++            )
++            spashtaList.find { it.graha == Graha.CHANDRA }?.rashi?.index
++        }
++    }
++
+     val transits = remember(currentZonedDateTime) {
+         val list = mutableListOf<TransitEvent>()
+         
+         // Find transits for next 1 year
+         listOf(Graha.GURU, Graha.SHANI, Graha.RAHU, Graha.KETU).forEach { graha ->
+@@ -82,6 +99,14 @@
+                                     color = MaroonPrimary
+                                 )
+                             )
++                            if (natalMoonRashiIndex != null) {
++                                val houseFromMoon = ((transit.targetRashi.index - natalMoonRashiIndex + 12) % 12) + 1
++                                val suffix = if (houseFromMoon in 11..13) "th" else when (houseFromMoon % 10) { 1 -> "st"; 2 -> "nd"; 3 -> "rd"; else -> "th" }
++                                Text(
++                                    text = "Transit in $houseFromMoon$suffix House from Natal Moon",
++                                    style = MaterialTheme.typography.labelSmall.copy(color = DarkTextSecondary, fontSize = 10.sp)
++                                )
++                            }
+                         }
+                         Text(
+                             text = transit.transitTime.format(dateFormatter),

@@ -1,0 +1,2 @@
+sed -i 's/currentTime: LocalTime = LocalTime.of(10, 10, 30),/currentTimeProvider: () -> LocalTime = { LocalTime.of(10, 10, 30) },/g' app/src/main/java/com/example/ui/components/GalaxyWatchFaceCanvas.kt
+sed -i 's/Canvas(modifier = Modifier.fillMaxSize()) {/Canvas(modifier = Modifier.fillMaxSize()) {\n            val currentTime = currentTimeProvider()/g' app/src/main/java/com/example/ui/components/GalaxyWatchFaceCanvas.kt

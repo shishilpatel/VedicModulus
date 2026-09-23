@@ -1,0 +1,170 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-09-14",
+  "license": "CC0-1.0",
+  "tracks": [
+    {
+      "id": "chakra_muladhara",
+      "category": "chakras",
+      "path": "audio/chakras/chakra_muladhara_lam.mp3",
+      "name": "Muladhara Bija (LAM)",
+      "element": "Earth",
+      "bija": "LAM",
+      "frequencyHz": 128.0
+    },
+    {
+      "id": "chakra_svadisthana",
+      "category": "chakras",
+      "path": "audio/chakras/chakra_svadisthana_vam.mp3",
+      "name": "Svadhisthana Bija (VAM)",
+      "element": "Water",
+      "bija": "VAM",
+      "frequencyHz": 144.0
+    },
+    {
+      "id": "chakra_manipura",
+      "category": "chakras",
+      "path": "audio/chakras/chakra_manipura_ram.mp3",
+      "name": "Manipura Bija (RAM)",
+      "element": "Fire",
+      "bija": "RAM",
+      "frequencyHz": 160.0
+    },
+    {
+      "id": "chakra_anahata",
+      "category": "chakras",
+      "path": "audio/chakras/chakra_anahata_yam.mp3",
+      "name": "Anahata Bija (YAM)",
+      "element": "Air",
+      "bija": "YAM",
+      "frequencyHz": 170.66
+    },
+    {
+      "id": "chakra_vishuddha",
+      "category": "chakras",
+      "path": "audio/chakras/chakra_vishuddha_ham.mp3",
+      "name": "Vishuddha Bija (HAM)",
+      "element": "Ether/Space",
+      "bija": "HAM",
+      "frequencyHz": 192.0
+    },
+    {
+      "id": "chakra_ajna",
+      "category": "chakras",
+      "path": "audio/chakras/chakra_ajna_om.mp3",
+      "name": "Ajna Bija (OM)",
+      "element": "Light/Mind",
+      "bija": "OM",
+      "frequencyHz": 216.0
+    },
+    {
+      "id": "chakra_sahasrara",
+      "category": "chakras",
+      "path": "audio/chakras/chakra_sahasrara_om.mp3",
+      "name": "Sahasrara Bija (OM/Silence)",
+      "element": "Consciousness",
+      "bija": "OM",
+      "frequencyHz": 240.0
+    },
+    {
+      "id": "seven_chakra_journey",
+      "category": "chakras",
+      "path": "audio/chakras/seven_chakra_journey.mp3",
+      "name": "7-Chakra Ascending Journey",
+      "element": "All",
+      "bija": "All",
+      "frequencyHz": 0.0
+    },
+    {
+      "id": "ambient_tanpura",
+      "category": "ambient",
+      "path": "audio/ambient/ambient_tanpura.mp3",
+      "name": "Indian Tanpura Drone",
+      "scale": "Sa-Pa Classical Drone"
+    },
+    {
+      "id": "ambient_flute",
+      "category": "ambient",
+      "path": "audio/ambient/ambient_flute.mp3",
+      "name": "Meditative Indian Flute (Bansuri)",
+      "scale": "Raag Bhupali / Yaman"
+    },
+    {
+      "id": "ambient_singing_bowls",
+      "category": "ambient",
+      "path": "audio/ambient/ambient_singing_bowls.mp3",
+      "name": "Tibetan Singing Bowls",
+      "scale": "Acoustic Bronze Resonance"
+    },
+    {
+      "id": "ambient_temple_bells",
+      "category": "ambient",
+      "path": "audio/ambient/ambient_temple_bells.mp3",
+      "name": "Temple Bells & Ghanta Chimes",
+      "scale": "432 Hz Resonant Decay"
+    },
+    {
+      "id": "ambient_rain_nature",
+      "category": "ambient",
+      "path": "audio/ambient/ambient_rain_nature.mp3",
+      "name": "Sacred Rain & Nature Stream",
+      "scale": "White/Pink Nature Noise"
+    },
+    {
+      "id": "ambient_deep_drone",
+      "category": "ambient",
+      "path": "audio/ambient/ambient_deep_drone.mp3",
+      "name": "Deep Cosmic Grounding Drone",
+      "scale": "108 Hz Harmonic Drone"
+    },
+    {
+      "id": "ambient_cosmic_space",
+      "category": "ambient",
+      "path": "audio/ambient/ambient_cosmic_space.mp3",
+      "name": "Cosmic Space & Shimmer",
+      "scale": "Celestial Ambient"
+    },
+    {
+      "id": "breathing_bell_inhale",
+      "category": "breathing",
+      "path": "audio/breathing/breathing_bell_inhale.mp3",
+      "name": "Inhale Bell Cue",
+      "frequencyHz": 528.0
+    },
+    {
+      "id": "breathing_bell_hold",
+      "category": "breathing",
+      "path": "audio/breathing/breathing_bell_hold.mp3",
+      "name": "Hold Bell Cue",
+      "frequencyHz": 432.0
+    },
+    {
+      "id": "breathing_bell_exhale",
+      "category": "breathing",
+      "path": "audio/breathing/breathing_bell_exhale.mp3",
+      "name": "Exhale Bell Cue",
+      "frequencyHz": 396.0
+    },
+    {
+      "id": "mantra_gayatri",
+      "category": "mantras",
+      "path": "audio/mantras/mantra_gayatri.mp3",
+      "name": "Gayatri Mantra Meditation",
+      "sanskrit": "ॐ भूर्भुवः स्वः तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि धियो यो नः प्रचोदयात्"
+    },
+    {
+      "id": "mantra_mahamrityunjaya",
+      "category": "mantras",
+      "path": "audio/mantras/mantra_mahamrityunjaya.mp3",
+      "name": "Mahamrityunjaya Mantra",
+      "sanskrit": "ॐ त्र्यम्बकं यजामहे सुगन्धिं पुष्टिवर्धनम् उर्वारुकमिव बन्धनान् मृत्योर्मुक्षीय मामृतात्"
+    },
+    {
+      "id": "mantra_om_shanti",
+      "category": "mantras",
+      "path": "audio/mantras/mantra_om_shanti.mp3",
+      "name": "Om Shanti Shanti Shanti",
+      "sanskrit": "ॐ शान्तिः शान्तिः शान्तिः"
+    }
+  ]
+}

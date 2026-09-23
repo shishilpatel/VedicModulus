@@ -1,0 +1,30 @@
+   435	private fun AnimatedSunPathArc(
+   436	    vedicTime: VedicTimeData,
+   437	    currentTime: java.time.ZonedDateTime,
+   438	    modifier: Modifier = Modifier
+   439	) {
+   440	    val dayDuration = java.time.Duration.between(vedicTime.sunrise, vedicTime.sunset).seconds.toFloat().coerceAtLeast(1f)
+   441	    val elapsedDay = java.time.Duration.between(vedicTime.sunrise, currentTime).seconds.toFloat()
+   442	    val progress = (elapsedDay / dayDuration).coerceIn(0f, 1f)
+   443	    
+   444	    val animatedProgress by androidx.compose.animation.core.animateFloatAsState(
+   445	        targetValue = progress,
+   446	        animationSpec = androidx.compose.animation.core.tween(durationMillis = 2000, easing = androidx.compose.animation.core.FastOutSlowInEasing),
+   447	        label = "sunPathArc"
+   448	    )
+   449	    
+   450	    androidx.compose.foundation.Canvas(modifier = modifier.fillMaxWidth().aspectRatio(2f)) {
+   451	        val canvasWidth = size.width
+   452	        val radius = canvasWidth / 2f
+   453	        
+   454	        // Dashed Background Arc (Full Sunrise to Sunset)
+   455	        drawArc(
+   456	            color = MaroonPrimary.copy(alpha = 0.2f),
+   457	            startAngle = 180f,
+   458	            sweepAngle = 180f,
+   459	            useCenter = false,
+   460	            size = androidx.compose.ui.geometry.Size(canvasWidth, canvasWidth),
+   461	            style = androidx.compose.ui.graphics.drawscope.Stroke(
+   462	                width = 4.dp.toPx(),
+   463	                cap = androidx.compose.ui.graphics.StrokeCap.Round,
+   464	                pathEffect = androidx.compose.ui.graphics.PathEffect.dashPathEffect(floatArrayOf(15f, 15f))

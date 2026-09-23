@@ -1,0 +1,27 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Fully illuminated golden moon -->
+    <path
+        android:fillColor="#FFCA28"
+        android:pathData="M 24,4 A 20,20 0 1,1 24,44 A 20,20 0 1,1 24,4 Z" />
+    <path
+        android:strokeColor="#FFE082"
+        android:strokeWidth="1.5"
+        android:pathData="M 24,4 A 20,20 0 1,1 24,44 A 20,20 0 1,1 24,4 Z" />
+    <!-- Lunar maria / sea craters (soft shading) -->
+    <path
+        android:fillColor="#FFA000"
+        android:fillAlpha="0.3"
+        android:pathData="M 18,15 A 4,4 0 1,1 18,23 A 4,4 0 1,1 18,15 Z" />
+    <path
+        android:fillColor="#FFA000"
+        android:fillAlpha="0.3"
+        android:pathData="M 31,19 A 5,5 0 1,1 31,29 A 5,5 0 1,1 31,19 Z" />
+    <path
+        android:fillColor="#FFA000"
+        android:fillAlpha="0.3"
+        android:pathData="M 22,30 A 5,5 0 1,1 22,40 A 5,5 0 1,1 22,30 Z" />
+</vector>

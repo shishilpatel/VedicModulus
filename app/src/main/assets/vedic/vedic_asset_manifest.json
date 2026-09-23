@@ -1,0 +1,42 @@
+{
+  "manifestVersion": "1.0.0",
+  "lastUpdated": "2026-09-14",
+  "assets": [
+    {
+      "id": "shree_yantra_gold",
+      "filename": "shree_yantra_gold.png",
+      "category": "YANTRA",
+      "description": "The supreme king of yantras, manifesting cosmic wealth, harmony, and spiritual ascent.",
+      "format": "PNG",
+      "versioning": {
+        "version": "1.0",
+        "author": "Google AI Studio Asset Generator",
+        "prompt": "A sacred intricate Shree Yantra geometric diagram in glowing gold lines on a deep maroon and royal blue cosmic background, sacred geometry, highly detailed, spiritual digital art, centered, 8k resolution"
+      }
+    },
+    {
+      "id": "navagraha_surya",
+      "filename": "navagraha_surya.png",
+      "category": "NAVAGRAHA",
+      "description": "Ruling planet of vitality, soul purpose, leadership, and divine illumination.",
+      "format": "PNG",
+      "versioning": {
+        "version": "1.0",
+        "author": "Google AI Studio Asset Generator",
+        "prompt": "Celestial divine representation of Surya the Sun god in radiant golden and ruby hues, sacred Vedic art, centered emblem"
+      }
+    },
+    {
+      "id": "kala_chakra_wheel",
+      "filename": "kala_chakra_wheel.png",
+      "category": "CHAKRA",
+      "description": "Wheel of time linking cosmic cycles, nakshatras, and planetary hours.",
+      "format": "PNG",
+      "versioning": {
+        "version": "1.0",
+        "author": "Google AI Studio Asset Generator",
+        "prompt": "Intricate Kala Chakra cosmic wheel of time with astrological symbols, nakshatras, and zodiac signs in gold and deep blue"
+      }
+    }
+  ]
+}

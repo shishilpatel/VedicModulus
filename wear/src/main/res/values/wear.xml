@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="android_wear_capabilities">
+        <item>watch_face_push</item>
+        <item>vedic_watch_face_receiver</item>
+        <item>vedic_complications</item>
+    </string-array>
+</resources>

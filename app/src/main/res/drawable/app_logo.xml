@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="256dp"
+    android:height="256dp"
+    android:viewportWidth="256"
+    android:viewportHeight="256">
+
+    <!-- Deep Space Nebula Glow Background -->
+    <path android:pathData="M0,0h256v256h-256z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="radial"
+                android:centerX="128"
+                android:centerY="120"
+                android:gradientRadius="160">
+                <item android:color="#2E1065" android:offset="0.0" />
+                <item android:color="#1E1B4B" android:offset="0.45" />
+                <item android:color="#0F172A" android:offset="0.8" />
+                <item android:color="#030712" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Celestial Nebula Clouds -->
+    <path
+        android:pathData="M0,0 Q128,60 256,0 L256,256 Q128,200 0,256 Z"
+        android:fillColor="#15581C87" />
+
+    <!-- Stars & Cosmic Sparkles -->
+    <path android:fillColor="#FFFFFFFF" android:pathData="M38,40 l2,2 l-2,2 l-2,-2 z" />
+    <path android:fillColor="#AAFDE047" android:pathData="M220,44 l3,3 l-3,3 l-3,-3 z" />
+    <path android:fillColor="#8093C5FD" android:pathData="M232,180 l2.5,2.5 l-2.5,2.5 l-2.5,-2.5 z" />
+    <path android:fillColor="#70FFFFFF" android:pathData="M24,196 l2,2 l-2,2 l-2,-2 z" />
+    <path android:fillColor="#CCFFFFFF" android:pathData="M78,22 l2,2 l-2,2 l-2,-2 z" />
+    <path android:fillColor="#90BAE6FD" android:pathData="M188,216 l2.5,2.5 l-2.5,2.5 l-2.5,-2.5 z" />
+
+    <!-- 1. Blue Earth Horizon Arc at Bottom -->
+    <path
+        android:pathData="M20,208 C60,192 196,192 236,208 C210,240 46,240 20,208 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="20"
+                android:startY="192"
+                android:endX="236"
+                android:endY="240">
+                <item android:color="#0284C7" android:offset="0.0" />
+                <item android:color="#0369A1" android:offset="0.5" />
+                <item android:color="#0C4A6E" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Earth Atmospheric Rim Glow -->
+    <path
+        android:strokeColor="#7DD3FC"
+        android:strokeWidth="2.5"
+        android:pathData="M20,208 C64,192 192,192 236,208" />
+
+    <!-- 2. Surya (Sun) on Left Side (Flames & Face Profile) -->
+    <path
+        android:pathData="M76,64 C60,52 54,68 44,64 C50,80 38,84 34,98 C44,102 36,118 36,128 C46,128 44,142 54,146 C48,158 60,162 72,168 L86,120 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="radial"
+                android:centerX="94"
+                android:centerY="112"
+                android:gradientRadius="64">
+                <item android:color="#FEF08A" android:offset="0.0" />
+                <item android:color="#F59E0B" android:offset="0.6" />
+                <item android:color="#B45309" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Sun Profile Crescent Mask -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M88,72 C74,78 66,94 66,112 C66,128 76,144 90,148 C80,138 78,124 80,112 C82,100 88,86 88,72 Z" />
+
+    <!-- 3. Chandra (Moon) on Right Side (Serene Crescent Face) -->
+    <path
+        android:pathData="M166,68 C182,80 190,98 190,116 C190,136 180,152 164,164 C174,154 180,136 180,116 C180,96 174,80 166,68 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="164"
+                android:startY="68"
+                android:endX="190"
+                android:endY="164">
+                <item android:color="#FFFFFF" android:offset="0.0" />
+                <item android:color="#BAE6FD" android:offset="0.5" />
+                <item android:color="#38BDF8" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Outer Lunar Aura -->
+    <path
+        android:pathData="M176,76 C196,90 206,106 206,116 C206,132 196,148 178,158 C190,144 196,130 196,116 C196,104 188,90 176,76 Z"
+        android:fillColor="#4093C5FD" />
+
+    <!-- 4. Concentric Astrological Zodiac Wheel -->
+    <!-- Outer Golden Ring -->
+    <path
+        android:strokeColor="#FDE047"
+        android:strokeWidth="4"
+        android:pathData="M128,52 A64,64 0 1,1 128,180 A64,64 0 1,1 128,52" />
+    <path
+        android:strokeColor="#F59E0B"
+        android:strokeWidth="1.8"
+        android:pathData="M128,60 A56,56 0 1,1 128,172 A56,56 0 1,1 128,60" />
+
+    <!-- Deep Blue Astrological Dial Face -->
+    <path
+        android:fillColor="#090D1C"
+        android:pathData="M128,62 A54,54 0 1,1 128,170 A54,54 0 1,1 128,62" />
+
+    <!-- 12 Zodiac Houses Radial Spoke Dividers -->
+    <path
+        android:strokeColor="#CCF59E0B"
+        android:strokeWidth="1.5"
+        android:pathData="M128,60 L128,72 M128,160 L128,172 M72,116 L84,116 M172,116 L184,116 M100,72 L106,82 M150,150 L156,160 M100,160 L106,150 M150,82 L156,72 M82,90 L92,96 M164,136 L174,142 M82,142 L92,136 M164,96 L174,90" />
+
+    <!-- 4 Cardinal Star Points (North, South, East, West) -->
+    <path android:fillColor="#FDE047" android:pathData="M128,42 L133,56 L128,53 L123,56 Z" />
+    <path android:fillColor="#FDE047" android:pathData="M128,190 L133,176 L128,179 L123,176 Z" />
+    <path android:fillColor="#FDE047" android:pathData="M202,116 L188,111 L191,116 L188,121 Z" />
+    <path android:fillColor="#FDE047" android:pathData="M54,116 L68,111 L65,116 L68,121 Z" />
+
+    <!-- Inner Divine Golden Aura -->
+    <path
+        android:pathData="M128,84 A32,32 0 1,1 128,148 A32,32 0 1,1 128,84">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="radial"
+                android:centerX="128"
+                android:centerY="116"
+                android:gradientRadius="32">
+                <item android:color="#60FDE047" android:offset="0.0" />
+                <item android:color="#20F59E0B" android:offset="0.7" />
+                <item android:color="#00000000" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 5. Sacred Golden OM Symbol (ॐ) -->
+    <!-- Main 3 Shape -->
+    <path
+        android:strokeColor="#FFD700"
+        android:strokeWidth="4.2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M112,106 C112,98 120,95 125,99 C130,103 128,110 123,115 C128,116 133,122 131,130 C128,136 119,136 114,132" />
+    <!-- Back loop of Om -->
+    <path
+        android:strokeColor="#FFD700"
+        android:strokeWidth="3.8"
+        android:strokeLineCap="round"
+        android:pathData="M123,115 C133,115 143,121 141,134" />
+    <!-- Crescent & Bindu (Chandra-Bindu) -->
+    <path
+        android:strokeColor="#FFD700"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:pathData="M125,91 C131,95 138,95 143,91" />
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M134,84 A2.8,2.8 0 1,1 134,89.6 A2.8,2.8 0 1,1 134,84" />
+
+    <!-- 6. Blooming Sacred Lotus Flower at Bottom -->
+    <!-- Outermost Left Petal -->
+    <path
+        android:pathData="M64,196 C74,174 98,180 106,198 C92,202 76,202 64,196 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="64"
+                android:startY="174"
+                android:endX="106"
+                android:endY="202">
+                <item android:color="#F472B6" android:offset="0.0" />
+                <item android:color="#DB2777" android:offset="0.6" />
+                <item android:color="#9D174D" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:strokeColor="#FDE047"
+        android:strokeWidth="1.2"
+        android:pathData="M64,196 C74,174 98,180 106,198" />
+
+    <!-- Outermost Right Petal -->
+    <path
+        android:pathData="M192,196 C182,174 158,180 150,198 C164,202 180,202 192,196 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="192"
+                android:startY="174"
+                android:endX="150"
+                android:endY="202">
+                <item android:color="#F472B6" android:offset="0.0" />
+                <item android:color="#DB2777" android:offset="0.6" />
+                <item android:color="#9D174D" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:strokeColor="#FDE047"
+        android:strokeWidth="1.2"
+        android:pathData="M192,196 C182,174 158,180 150,198" />
+
+    <!-- Mid-Left Petal -->
+    <path
+        android:pathData="M84,198 C94,168 116,172 120,200 C106,203 94,202 84,198 Z"
+        android:fillColor="#F43F5E" />
+    <path
+        android:strokeColor="#FDE047"
+        android:strokeWidth="1.4"
+        android:pathData="M84,198 C94,168 116,172 120,200" />
+
+    <!-- Mid-Right Petal -->
+    <path
+        android:pathData="M172,198 C162,168 140,172 136,200 C150,203 162,202 172,198 Z"
+        android:fillColor="#F43F5E" />
+    <path
+        android:strokeColor="#FDE047"
+        android:strokeWidth="1.4"
+        android:pathData="M172,198 C162,168 140,172 136,200" />
+
+    <!-- Center Majestic Lotus Petal -->
+    <path
+        android:pathData="M128,154 C138,170 146,192 128,206 C110,192 118,170 128,154 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="128"
+                android:startY="154"
+                android:endX="128"
+                android:endY="206">
+                <item android:color="#FECDD3" android:offset="0.0" />
+                <item android:color="#FB7185" android:offset="0.4" />
+                <item android:color="#BE123C" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:strokeColor="#FEF08A"
+        android:strokeWidth="1.6"
+        android:pathData="M128,154 C138,170 146,192 128,206 C110,192 118,170 128,154 Z" />
+
+    <!-- Golden Central Lotus Seed Pod -->
+    <path
+        android:fillColor="#FDE047"
+        android:pathData="M123,200 A5,2.5 0 1,1 133,200 A5,2.5 0 1,1 123,200" />
+</vector>

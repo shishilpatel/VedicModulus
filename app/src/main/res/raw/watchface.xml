@@ -1,0 +1,80 @@
+<WatchFace width="450" height="450" clipShape="CIRCLE">
+    <!-- Watch Face Metadata -->
+    <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+    <Metadata key="PREVIEW_TIME" value="10:08:32" />
+
+    <Scene backgroundColor="#FF0F0E17">
+        <!-- Subtle Ambient Background Ring -->
+        <PartDraw x="0" y="0" width="450" height="450">
+            <Ellipse x="20" y="20" width="410" height="410">
+                <Stroke color="#26E8B05C" thickness="2" />
+            </Ellipse>
+            <Ellipse x="35" y="35" width="380" height="380">
+                <Stroke color="#1AFFFFFF" thickness="1" />
+            </Ellipse>
+        </PartDraw>
+
+        <!-- Digital Clock Display (Hours & Minutes) -->
+        <DigitalClock x="75" y="150" width="300" height="100">
+            <TimeText>
+                <Font family="SYNC_TO_DEVICE" size="76" color="#FFFFFFFF" weight="700">
+                    <Template>%s:%s
+                        <Parameter expression="[HOUR_0_23_Z]" />
+                        <Parameter expression="[MINUTE_Z]" />
+                    </Template>
+                </Font>
+            </TimeText>
+        </DigitalClock>
+
+        <!-- Seconds Display -->
+        <DigitalClock x="200" y="250" width="50" height="30">
+            <TimeText>
+                <Font family="SYNC_TO_DEVICE" size="20" color="#FFE8B05C" weight="600">
+                    <Template>%s
+                        <Parameter expression="[SECOND_Z]" />
+                    </Template>
+                </Font>
+            </TimeText>
+        </DigitalClock>
+
+        <!-- Battery / Ranged Value Complication Slot -->
+        <ComplicationSlot
+            id="1"
+            slotType="RANGED_VALUE"
+            supportedTypes="RANGED_VALUE SHORT_TEXT NOT_CONFIGURED"
+            x="175"
+            y="295"
+            width="100"
+            height="100">
+            
+            <DefaultProviderPolicy
+                defaultSystemProvider="SYSTEM_PROVIDER_BATTERY"
+                defaultSystemProviderType="RANGED_VALUE" />
+
+            <Complication>
+                <RangedValue>
+                    <!-- Battery Progress Track & Progress Arc -->
+                    <PartDraw x="10" y="10" width="80" height="80">
+                        <Arc startAngle="135" endAngle="405" direction="CLOCKWISE">
+                            <Stroke color="#33FFFFFF" thickness="5" />
+                        </Arc>
+                        <Arc startAngle="135" length="270 * [COMPLICATION.RANGED_VALUE_PERCENT]" direction="CLOCKWISE">
+                            <Stroke color="#FF4CAF50" thickness="5" />
+                        </Arc>
+                    </PartDraw>
+
+                    <!-- Battery Percentage Text -->
+                    <PartText x="10" y="26" width="80" height="30">
+                        <Text align="CENTER">
+                            <Font family="SYNC_TO_DEVICE" size="16" color="#FFFFFFFF" weight="600">
+                                <Template>%d%%
+                                    <Parameter expression="round([COMPLICATION.RANGED_VALUE_VALUE])" />
+                                </Template>
+                            </Font>
+                        </Text>
+                    </PartText>
+                </RangedValue>
+            </Complication>
+        </ComplicationSlot>
+    </Scene>
+</WatchFace>

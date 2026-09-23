@@ -1,0 +1,23 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Dark disc background -->
+    <path
+        android:fillColor="#1E2230"
+        android:pathData="M 24,4 A 20,20 0 1,1 24,44 A 20,20 0 1,1 24,4 Z" />
+    <path
+        android:strokeColor="#3E455B"
+        android:strokeWidth="1.2"
+        android:pathData="M 24,4 A 20,20 0 1,1 24,44 A 20,20 0 1,1 24,4 Z" />
+    <!-- Waxing crescent (right edge illuminated) -->
+    <path
+        android:fillColor="#FFCA28"
+        android:pathData="M 24,4 A 20,20 0 0,1 24,44 A 10,20 0 0,0 24,4 Z" />
+    <!-- Subtle crater detail inside crescent -->
+    <path
+        android:fillColor="#FFA000"
+        android:fillAlpha="0.4"
+        android:pathData="M 33,21 A 2.5,2.5 0 1,1 33,26 A 2.5,2.5 0 1,1 33,21 Z" />
+</vector>

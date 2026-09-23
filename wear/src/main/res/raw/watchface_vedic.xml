@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WatchFace width="450" height="450">
+    <Metadata key="CLOCK_TYPE" value="ANALOG" />
+    <Metadata key="PREVIEW_TIME" value="10:08:32" />
+    <Metadata key="VENDOR" value="Vedic Jyotish" />
+    <Metadata key="VERSION" value="2" />
+
+    <UserConfigurations>
+        <ColorConfiguration id="theme_palette" defaultValue="cosmic_gold">
+            <ColorOption id="cosmic_gold" colors="#ffffd166 #fff43f5e" />
+            <ColorOption id="royal_ruby" colors="#ffffd700 #ffdc2626" />
+            <ColorOption id="chakra_lotus" colors="#ffa855f7 #ff06b6d4" />
+        </ColorConfiguration>
+    </UserConfigurations>
+
+    <Scene backgroundColor="#ff000000">
+        <!-- Ambient and Interactive Background -->
+        <PartDraw x="0" y="0" width="450" height="450">
+            <Circle centerX="225" centerY="225" radius="220" color="#1e293b" />
+            <Circle centerX="225" centerY="225" radius="190" color="#0f172a" />
+        </PartDraw>
+
+        <!-- Complication Slot 0: Top - Sunrise / Steps / Weather -->
+        <ComplicationSlot
+            slotId="0"
+            supportedTypes="SHORT_TEXT LONG_TEXT RANGED_VALUE SMALL_IMAGE MONOCHROMATIC_IMAGE"
+            x="175"
+            y="35"
+            width="100"
+            height="55">
+            <DefaultProviderPolicy
+                primaryProvider="com.example.wear.VedicSunriseSunsetComplicationService"
+                defaultSystemProviderType="SUNRISE_SUNSET" />
+        </ComplicationSlot>
+
+        <!-- Complication Slot 1: Left - Tithi / Nakshatra / Hora / Heart Rate -->
+        <ComplicationSlot
+            slotId="1"
+            supportedTypes="SHORT_TEXT LONG_TEXT RANGED_VALUE SMALL_IMAGE MONOCHROMATIC_IMAGE"
+            x="30"
+            y="185"
+            width="95"
+            height="70">
+            <DefaultProviderPolicy
+                primaryProvider="com.example.wear.VedicComplicationDataSourceService"
+                defaultSystemProviderType="HEART_RATE" />
+        </ComplicationSlot>
+
+        <!-- Complication Slot 2: Right - Choghadiya Muhurat / Weather -->
+        <ComplicationSlot
+            slotId="2"
+            supportedTypes="SHORT_TEXT LONG_TEXT RANGED_VALUE SMALL_IMAGE MONOCHROMATIC_IMAGE"
+            x="325"
+            y="185"
+            width="95"
+            height="70">
+            <DefaultProviderPolicy
+                primaryProvider="com.example.wear.VedicChoghadiyaComplicationService" />
+        </ComplicationSlot>
+
+        <!-- Complication Slot 3: Bottom - Steps / Watch Battery / Planetary Hora -->
+        <ComplicationSlot
+            slotId="3"
+            supportedTypes="SHORT_TEXT LONG_TEXT RANGED_VALUE SMALL_IMAGE MONOCHROMATIC_IMAGE"
+            x="175"
+            y="345"
+            width="100"
+            height="60">
+            <DefaultProviderPolicy
+                primaryProvider="com.example.wear.VedicHoraComplicationService"
+                defaultSystemProviderType="STEP_COUNT" />
+        </ComplicationSlot>
+
+        <!-- Analog Clock Hands -->
+        <AnalogClock x="0" y="0" width="450" height="450">
+            <HourHand
+                x="218"
+                y="115"
+                width="14"
+                height="135"
+                pivotX="0.5"
+                pivotY="0.82">
+                <PartDraw x="0" y="0" width="14" height="135">
+                    <Line startX="7" startY="0" endX="7" endY="135" color="#ffffffff" strokeWidth="6" />
+                </PartDraw>
+            </HourHand>
+
+            <MinuteHand
+                x="220"
+                y="65"
+                width="10"
+                height="185"
+                pivotX="0.5"
+                pivotY="0.86">
+                <PartDraw x="0" y="0" width="10" height="185">
+                    <Line startX="5" startY="0" endX="5" endY="185" color="#ffe2e8f0" strokeWidth="4" />
+                </PartDraw>
+            </MinuteHand>
+
+            <SecondHand
+                x="222"
+                y="45"
+                width="6"
+                height="205"
+                pivotX="0.5"
+                pivotY="0.88">
+                <PartDraw x="0" y="0" width="6" height="205">
+                    <Line startX="3" startY="0" endX="3" endY="205" color="#ffffd166" strokeWidth="2" />
+                </PartDraw>
+            </SecondHand>
+        </AnalogClock>
+    </Scene>
+</WatchFace>

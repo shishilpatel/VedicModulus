@@ -1,0 +1,6 @@
+{
+  "name": "Vedic Cosmic Ghadi",
+  "description": "Personalized Astrology, Numerology, Vastu & Vedic Time Watch Face for Wear OS smartwatches and companion Android app.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
